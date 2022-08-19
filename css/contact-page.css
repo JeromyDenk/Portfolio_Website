@@ -17,7 +17,7 @@ p {
     padding:1em;
 }
 
-.contact-link .contact-icon{
+.contact-link .contact-page-icon{
     max-width:40px;
     max-height:40px;
     object-fit:contain;
@@ -42,3 +42,6 @@ p {
 .contact-link:hover a span{
     font-weight: 400;   
 }
+
+
+
