@@ -1,0 +1,9 @@
+/* ------------------------- Filter Buttons ------------------------- */
+.filter-button img{
+    height:1rem;
+    width:1rem;
+}
+.filter-button span{
+    font-family: 'Montserrat', sans-serif;
+    font-size: large;
+}
