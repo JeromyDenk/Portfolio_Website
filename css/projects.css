@@ -1,9 +1,59 @@
 /* ------------------------- Filter Buttons ------------------------- */
-.filter-button img{
-    height:1rem;
-    width:1rem;
+
+/* Shitty solution - so that cards don't cause too much jumping around */
+section.projects .container-lg{
+    min-height: 888.578px;
 }
-.filter-button span{
-    font-family: 'Montserrat', sans-serif;
-    font-size: large;
+
+.filtering-header{
+    padding-top:20px;
+}
+
+.nav-item *{
+    align-items: center;
+    vertical-align: middle;    
+}
+
+.filter-nav{
+    /* display: table-cell; */
+    align-items: center;
+    vertical-align: middle;    
+    cursor: pointer;
+}
+
+
+
+
+
+.filter-nav img{
+    margin:0.2em;
+    height:2.2rem;
+    width:2.2rem;
+}
+
+.filter-nav span{
+    padding:2rem 0 2rem 0;
+    color:black;
+}
+
+/* Active Navs */
+.filter-nav.active span{
+    color:white;
+}
+.filter-nav.active img{
+    filter:invert(1);
+}
+
+.nav-item .filter-nav.active{
+    background-color: #f44336;
+}
+/* Hover over Buttons */
+
+
+.nav-item .filter-nav:hover{
+    background-color: rgb(212, 212, 212);
+}
+
+.nav-item .filter-nav.active:hover{
+    background-color: #f44336;
 }

@@ -1,3 +1,38 @@
+/* ------------------------- Splash Image and Project Title ------------------------- */
+.splash-img{
+  z-index: 0;
+}
+.img-container{
+  position:relative;
+}
+
+/* Title Positioning */
+.project-title{
+  position:absolute;
+  transform-origin: center;
+  top: 50%;
+  z-index: 1;
+  left: 0;
+  text-align:center;
+  width: 100%;
+}
+/* Title Text Formatting */
+.project-title h1{
+  font-family: 'Montserrat', sans-serif;
+  font-size:2.5rem;
+  font-weight:500;   
+  color: white;
+  padding-bottom:0.5rem;
+}
+/* Subtitle Text Formatting */
+.project-title h2{
+  font-family: 'Montserrat', sans-serif;
+  font-size:large;
+  font-weight:lighter; 
+  color: white;
+}
+
+
 /* ------------------------- Project Breadcrumb ------------------------- */
 ol.breadcrumb {
     color:aqua;
