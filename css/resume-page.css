@@ -1,0 +1,21 @@
+/* ------------------------- Resume ------------------------- */
+.resume-container{
+    height:125vw;
+    padding-bottom: 2rem;
+}
+
+@media (min-width: 992px){
+    .resume-container {
+        height: 1235.04px; /*(960+32)x1.245*/
+    }
+}
+@media (min-width: 1200px){
+    .resume-container {
+        height: 1459.14px; /*(1140+32)x1.245*/
+    }
+}
+@media (min-width: 1400px){
+    .resume-container {
+        height: 1683.24px; /*(1320+32)x1.245*/
+    }
+}

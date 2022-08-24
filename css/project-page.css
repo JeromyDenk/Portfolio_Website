@@ -9,29 +9,42 @@
 /* Title Positioning */
 .project-title{
   position:absolute;
-  transform-origin: center;
   top: 50%;
+  left: 50%;
   z-index: 1;
-  left: 0;
   text-align:center;
-  width: 100%;
+  -webkit-transform: translate(-50%, -50%); /* iOS */
+  transform: translate(-50%, -50%);
+
+  background-color: rgba(0, 0, 0, 0.35);
+  border-radius: 1rem;
 }
+
 /* Title Text Formatting */
 .project-title h1{
   font-family: 'Montserrat', sans-serif;
-  font-size:2.5rem;
+  font-size:2.8rem;
   font-weight:500;   
   color: white;
+  padding-top:0.2rem;
   padding-bottom:0.5rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
+
 /* Subtitle Text Formatting */
 .project-title h2{
   font-family: 'Montserrat', sans-serif;
-  font-size:large;
+  font-size:larger;
   font-weight:lighter; 
   color: white;
+  padding-bottom:0.1rem;
 }
 
+.project-title h2:after{
+  content: " ";
+  background-color: black;
+}
 
 /* ------------------------- Project Breadcrumb ------------------------- */
 ol.breadcrumb {
