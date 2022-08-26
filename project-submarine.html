@@ -110,6 +110,9 @@
                     <!-- Table of Contents -->
                     <div class="col-3 d-none d-md-block">
                         <nav class="toc">
+                            <div style="width:100%;text-align:center">
+                                <b>on this page</b>
+                            </div>
                             <ul>
                                <li><a href="#topic1">Project Mandate</a></li>
                                <li>
@@ -120,38 +123,92 @@
                                      <li><a href="#itemC">Emergency Dropweights</a></li>
                                   </ul>
                                </li>
-                               <li>
-                                  <a href="#css">Topic 3</a>
-                                  <ul>
-                                     <li><a href="#itemE">Item E</a></li>
-                                     <li><a href="#itemF">Item F</a></li>
-                                     <li><a href="#itemG">Item G</a></li>
-                                  </ul>
-                               </li>
+                               <li><a href="#topic3">Parametrization</a></li>
+                               <li><a href="#topic4">Video and Report</a></li>
                             </ul>
                             <svg class="toc-marker" width="200" height="200" xmlns="http://www.w3.org/2000/svg">
                                <path stroke="#444" stroke-width="3" fill="transparent" stroke-dasharray="0, 0, 0, 1000" stroke-linecap="round" stroke-linejoin="round" transform="translate(-0.5, -0.5)" />
                             </svg>
                          </nav>
                     </div>
-
+                    
                     <!-- Article -->
-                    <div class="col-12 col-md-8">
+                    <div class="col-12 col-md-9">
                         <article class="contents">
                             <section id="topic1">
-                               <h2>The Project Mandate</h2>
+                               <h2>The Project</h2>
                                <p>
-                                    The task for this project was to design a ballast system for a manned submersible capable of diving to depths of up to 1000m.
+                                    For our engineering capstone project, our group was tasked with designing a ballast system for a manned submersible that would allow the craft to dive to depths of up to 1000m.
                                 </p>
                                 <p>
-                                    The project consisted of two teams - one for the design of the frame and passenger compartment - and our's, which was tasked with the design of the submarine's ballast system.
+                                    Design of the vessel was broken up into two teams, with one team managing the design of the sub's frame and passenger cabin, and our team, tasked with designing the sub's ballast system. Working with another team proved to be a very valuable learning experience. Early attempts at integrating the design of the ballast system with the sub's frame resulted in severe weight and balance issues that had to be resolved through several meetings. At the end, the sub met or exceeded all of the design requirements. Looking back, I'm proud of the design our team came up with.
+                                </p>
+                                <img src="images/submarine/card-submarine.jpg" alt="">
+                                <h3>Design Requirements</h3>
+                                <p>
+                                    The project design requirements consisted of the following:
+                                    <ul>
+                                        <li>The submarine must be capable of withstanding dives of up to 1000m in depth</li>
+                                        <li>Main ballast tanks used for surfacing the sub must be capable of generating 2200kg of buoyant force</li>
+                                        <li>Variable ballast tanks used for pitch trim and deptch control must provide a maximum of 50kg of buoyancy</li>
+                                        <li>The sub must contain a drop weight mechanism for emergency deballasting</li>
+                                    </ul>
                                 </p>
                             </section>
                             <section id="topic2">
                                 <h2>Proposed Design</h2>
                                 <h3 id="itemA">The Main Ballast System</h3>
+                                <img src="images/submarine/Capstone-Submarine-Final-8 2.jpg" alt="">
+                                <p>
+                                    Two cyllindrical main ballast tanks (MBTs) on either side of the passenger cabin enable the submarine to surface above the water, and give it enough buoyancy so that passengers can safely enter and exit the cabin.
+                                </p>
+                                <p>
+                                    The main ballast tanks are fed by four compressed air bottles located behind the passenger compartment.
+                                </p>
+                                <p>
+                                    Deballasting (flooding the main ballast tanks) is accomplished by four solenoid-controlled valves - two on top of each MBT. When opened, the weight of the submarine forces water to displace the air inside the MBTs, putting the sub in a neutrally buoyant state and ready to dive.
+                                </p>
                                 <h3 id="itemB">The Variable Ballast System</h3>
+                                <img src="images/submarine/Capstone-Submarine-Final-4.jpg" alt="">
+                                <p>
+                                    The variable ballast system allows for both pitch trim, and fine buoyancy control of the submarine. It consists of two forward variable ballast tanks (VBTs) located behind the forward dome of each MBT, and one rear VBT - located behind the passenger cabin. 
+                                </p>
+                                <p>
+                                    Designing the variable ballast system to allow for both depth control and pitch control was perhaps the most challenging part of the project. 
+                                </p>
+                                <img src="images/submarine/Pasted image 20220823175520.png" alt="">
+                                <p>
+                                    Located behind the passenger compartment, the valve panel houses the electric motor, pump, seawater intake, and all of the plumbing and solenoid valves needed to accomplish both pitch-trim control and depth-control of the submarine.
+                                </p>
+                                <p>
+                                    The variable ballast system is explained in-depth in our team's video presentation, as well as in our full project report.
+                                </p>
+                            
                                 <h3 id="itemC">Emergency Dropweights</h3>
+                                <img src="images/submarine/Untitled 3.jpg" alt="">
+                                <p>
+                                    Two dropweights - one below each MBT - contain the bulk of the submarine's batteries as well as additional lead weights.
+                                </p>
+                                <p>
+                                    In the event of an emergency, or complete loss of power, solenoid actuators holding the dropweights in place via pins retract, allowing the dropweights to be jettisoned. This places the submarine into a positively buoyant state, even in the event that all VBTs and MBTs are completely flooded with water.
+                                </p>
+                            </section>
+                            <section id="topic3">
+                                <h2>Parametrization</h2>
+                                <p>In order to allow for rapid reconfiguring of the ballast system design, a MATLAB GUI was created, which allows the user to quickly generate Solidworks part files given a range of inputs:</p>
+                                <p>
+                                    <ul>
+                                        <li>Minimum desired freeboard affects the radius of the MBTs</li>
+                                        <li>Maximum operating depth affects the thickness of the MBTs and VBTs, as well as the number of air bottles needed</li>
+                                        <li>Water temperature and salinity affects the size of the dropweights needed for the sub to remain neutrally buoyant</li>
+                                        <li>Desired ascent and descent speeds affect the maximum ballast capacity of the VBTs</li>
+                                    </ul>
+                                </p>
+                                <img src="images/submarine/Pasted image 20220823180904.png" alt="">
+                            </section>
+                            <section id="topic4">
+                                <h2>Presentation Video and Project Report</h2>
+
                             </section>
 
                          </article>
