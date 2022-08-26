@@ -1,4 +1,4 @@
-/* Import Fonts */
+/* ------------------------- Import Fonts ------------------------- */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
 
 @import url('https://fonts.googleapis.com/css2?family=Exo:ital,wght@0,100;0,200;0,300;0,400;0,500;1,100&family=Montserrat:wght@400;700&family=Play:wght@400;700&display=swap');
@@ -19,10 +19,16 @@ body{
     padding-top:70px;
 }
 
+a{
+    text-decoration: none;
+}
+
 /* .nav-link.active *{
     font-weight: 100;
     color: blue;
 } */
+
+/* ------------------------- Splash Image ------------------------- */
 
 .splash-img {
     align-content:baseline;
@@ -33,6 +39,60 @@ body{
     /* justify-content: bottom; */
     object-fit: cover;
     object-position: 0 100%;
+}
+
+/* ------------ Splash Blurb ------------ */
+.blurb{
+    background-color: rgba(255, 255, 255, 0.15);
+}
+
+/* ------------ Splash Blurb Text ------------ */
+.blurb b{
+    color: white;
+    /* font-size: x-large; */
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;    
+}
+
+
+/* ------------ Hello Blurb ------------ */
+.hello-blurb{
+    position:absolute;
+    top: 6.5rem;
+    z-index: 1;
+    z-index: 1;
+    max-width: 30em;
+
+    border-radius: 1rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    padding: 1em;;
+  }
+
+  @media (min-width: 992px){
+    .navbar li {
+        margin-left : 1em;
+        margin-right : 1em;
+    }
+}
+
+/* ------------ Location Blurb ------------ */
+.location-blurb{
+    position:absolute;
+    padding: 0.4em 1em 0.4em 0.5em;
+    z-index: 1;
+    border-radius: 1.2rem;
+    margin-left: 2rem;
+
+    -webkit-transform: translate(0, -5rem); /* iOS */
+    transform: translate(0, -5rem);
+  }
+
+.location-blurb img{
+    filter:invert(1);
+    width:35px;
+    height:50px;
+    object-fit:contain;
 }
 
 .bg-secondary{
@@ -101,8 +161,9 @@ h3.card-title{
 }
 .view-more h2{
     color:black;
-    margin-top:1%;
-    margin-bottom:1%; 
+    margin:10px 0 20px 0;
+    /* margin-top:1%;
+    margin-bottom:1%;  */
 }
 
 /* .view-more h2:hover{
@@ -131,7 +192,7 @@ h3.card-title{
     background: black;
     height: 1px;
     top: 50%;
-    right: calc(100% + 5.5em);
+    right: calc(100% + 4.2em);
     width: calc(100% - 5.5em);
 }
 
@@ -157,7 +218,7 @@ h3.card-title{
     background: black;
     height: 1px;
     top: 50%;
-    right: 0%;
+    left: calc(4.2em);
     /* Adjust width depending on stuff */
     width: calc(100% - 5.5em);
     
@@ -187,6 +248,16 @@ h3.card-title{
     filter:drop-shadow(0 0 0rem black);
     transition-timing-function: cubic-bezier(0.7, 0, 0.2, 1);
 }
+
+@media (min-width: 576px){
+    .view-more::before{
+        right: calc(100% + 5.5em);
+    }
+    .view-more::after{
+        left: 5.5em;
+    }
+}
+
 
 /* ------------------------- Project Cards ------------------------- */
 .project-card{
@@ -253,6 +324,14 @@ h3.card-title{
     -webkit-filter: drop-shadow(0 0 0.2rem rgba(116, 116, 116, 0.518));
     transform: scale(1.2);
     
+}
+
+/* Icon Padding Width */
+@media (min-width: 992px){
+    .icon-cont .row{
+        padding-left:2em;
+        padding-right:2em;
+    }
 }
 
 /* --------- Contact Form ------------ */
