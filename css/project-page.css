@@ -47,6 +47,11 @@
   background-color: black;
 } */
 
+/* article h2{
+  border-bottom: 1px black solid;
+} */
+
+
 /* ------------------------- Project Breadcrumb ------------------------- */
 ol.breadcrumb {
     color:aqua;
@@ -210,5 +215,11 @@ ol.breadcrumb > li.breadcrumb-item.active > span{
     line-height: 1.5em;
   }
 
-  /* --------- Slideshows ------------ */
+  /* --------- Embedded Youtube Videos ------------ */
+
+  .video-container { position: relative; padding-bottom: 56.25%; padding-top: 30px; height: 0; overflow: hidden; }
+
+  .video-container iframe, .video-container object, .video-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+
   /* I want slideshows that have captions, left and right buttons, and you can full-size the slideshow and click off if you want to. */
+
