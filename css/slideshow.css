@@ -5,10 +5,17 @@
 /* Hide slideshow images by default */
 .mySlides {
 display: none;
+position: relative;
+}
+
+.mySlides .caption-text{
+    position:relative;
+    z-index:3;
 }
 
 .active-slide {
 display:block;
+position: relative;
 }
 
 /* Position the image container (needed to position the left and right arrows) */
@@ -16,59 +23,101 @@ display:block;
 position: relative;
 }
 
-/* .slideshow-container {
-    position:fixed;
-    width:100vw;
-    } */
+/* Next & Previous Divs */
+.hover-bar{
+    z-index:1;
+    position:absolute;
+    height:100%;
+    width: 15%;
+    top:0;
+    /* margin: 1em; */
+    /* vertical-align: middle;
+    justify-content: center;
+    align-content: center; */
+}
 
-/* Add a pointer when hovering over the thumbnail images */
-/* .cursor {
-cursor: pointer;
-} */
+.hover-bar.left{
+    left:0%;
+}
+
+.hover-bar.right{
+    right:0%;
+}
+
 
 /* Next & previous buttons */
+
+
 .prev,
 .next {
 cursor: pointer;
+display:flex;
+vertical-align: middle;
+align-items:center;
+justify-content:center;
 text-decoration: none;
-position: absolute;
+position: relative;
 z-index: 6;
+box-sizing: border-box;
+/* top: 50%; */
+width: 100%;
+height: 100%;
 
-top: 50%;
-/* -webkit-transform: translate(0, -100%);
-transform: translate(0, -100%); */
-width: auto;
-padding: 3rem 1rem 3rem 1rem;
-margin-top: -50px;
-color: white;
-background-color: rgba(0, 0, 0, 0.15);
+color: rgba(255, 255, 255, 0.719);
 font-weight: bold;
-font-size: 20px;
+transition: color 0.15s;
+font-size: 24px;
 border-radius: 0 3px 3px 0;
 user-select: none;
 -webkit-user-select: none;
 }
 
-/* Position the "next button" to the right */
-.next {
-position: absolute;
-right:0%;
-border-radius: 3px 0 0 3px;
+/* Backgrounds */
+
+/* Spans */
+.prev span,
+.next span{
+    position:absolute; 
+    z-index:1;
+    width:100%;
+    height:100%;
+    top:0;
+    left: 0;
+}
+
+.prev span{
+    background-image: linear-gradient(to left, rgba(68,68,68,0), rgba(134, 134, 134, 0.25), rgba(197, 197, 197, 0.5));
+    transition: opacity 0.15s linear;
+    opacity: 0;
+}
+
+.next span{
+    background-image: linear-gradient(to right, rgba(68,68,68,0), rgba(134, 134, 134, 0.25), rgba(197, 197, 197, 0.5));
+    transition: opacity 0.15s linear;
+    opacity: 0;
 }
 
 /* On hover, add a black background color with a little bit see-through */
 .prev:hover,
 .next:hover {
-background-color: rgba(0, 0, 0, 0.8);
+    color:white;
+    font-size: 30px;
 }
+
+.prev span:hover,
+.next span:hover {
+    opacity: 1;
+}
+
 
 /* Number text (1/3 etc) */
 .numbertext {
+position: absolute;
 color: #f2f2f2;
+z-index:2;
 background-color: rgba(0, 0, 0, 0.4);
 font-size: 12px;
 padding: 8px 12px;
-position: absolute;
 top: 0;
 }
 
@@ -92,6 +141,7 @@ top: 0;
 
 /* Container for image text */
 .caption-text {
+z-index: 3;
 text-align: center;
 background-color: #222;
 padding: 2px 16px;

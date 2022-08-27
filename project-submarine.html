@@ -179,9 +179,12 @@
                                     </div>
                         
                                     <!-- Next and previous buttons -->
-                                    <a class="prev">&#10094;</a>
-                                    <a class="next">&#10095;</a>
-                                    <!-- <a class="expand"><img src="images/138-enlarge.png" alt=""></a> -->
+                                    <div class="hover-bar left">
+                                        <a class="prev">&#10094;<span></span></a>
+                                    </div>
+                                    <div class="hover-bar right">
+                                        <a class="next">&#10095;<span></span></a>
+                                    </div>
                         
                                 </div>
                                 <h3>Design Requirements</h3>
@@ -226,8 +229,12 @@
 
                         
                                     <!-- Next and previous buttons -->
-                                    <a class="prev">&#10094;</a>
-                                    <a class="next">&#10095;</a>
+                                    <div class="hover-bar left">
+                                        <a class="prev">&#10094;<span></span></a>
+                                    </div>
+                                    <div class="hover-bar right">
+                                        <a class="next">&#10095;<span></span></a>
+                                    </div>
                                     <!-- <a class="expand"><img src="images/138-enlarge.png" alt=""></a> -->
                         
                                 </div>
@@ -273,8 +280,12 @@
 
                         
                                     <!-- Next and previous buttons -->
-                                    <a class="prev">&#10094;</a>
-                                    <a class="next">&#10095;</a>
+                                    <div class="hover-bar left">
+                                        <a class="prev">&#10094;<span></span></a>
+                                    </div>
+                                    <div class="hover-bar right">
+                                        <a class="next">&#10095;<span></span></a>
+                                    </div>
                                     <!-- <a class="expand"><img src="images/138-enlarge.png" alt=""></a> -->
                         
                                 </div>
@@ -306,8 +317,12 @@
 
                         
                                     <!-- Next and previous buttons -->
-                                    <a class="prev">&#10094;</a>
-                                    <a class="next">&#10095;</a>
+                                    <div class="hover-bar left">
+                                        <a class="prev">&#10094;<span></span></a>
+                                    </div>
+                                    <div class="hover-bar right">
+                                        <a class="next">&#10095;<span></span></a>
+                                    </div>
                                     <!-- <a class="expand"><img src="images/138-enlarge.png" alt=""></a> -->
                         
                                 </div>
@@ -352,8 +367,12 @@
 
                         
                                     <!-- Next and previous buttons -->
-                                    <a class="prev">&#10094;</a>
-                                    <a class="next">&#10095;</a>
+                                    <div class="hover-bar left">
+                                        <a class="prev">&#10094;<span></span></a>
+                                    </div>
+                                    <div class="hover-bar right">
+                                        <a class="next">&#10095;<span></span></a>
+                                    </div>
                                     <!-- <a class="expand"><img src="images/138-enlarge.png" alt=""></a> -->
                         
                                 </div>
@@ -403,8 +422,12 @@
 
                         
                                     <!-- Next and previous buttons -->
-                                    <a class="prev">&#10094;</a>
-                                    <a class="next">&#10095;</a>
+                                    <div class="hover-bar left">
+                                        <a class="prev">&#10094;<span></span></a>
+                                    </div>
+                                    <div class="hover-bar right">
+                                        <a class="next">&#10095;<span></span></a>
+                                    </div>
                                     <!-- <a class="expand"><img src="images/138-enlarge.png" alt=""></a> -->
                         
                                 </div>
@@ -642,7 +665,7 @@
 
         for (i = 0; i < links.length; i++) {
         links[i].onclick = function() {
-            current = this.parentNode;
+            current = this.parentNode.parentNode;
 
             var slides = current.getElementsByClassName("mySlides");
             // var dots = current.getElementsByClassName("dot");
