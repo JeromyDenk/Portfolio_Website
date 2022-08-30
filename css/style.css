@@ -55,6 +55,28 @@ a{
     font-weight: 300;    
 }
 
+.blurb b.h4{
+    font-size: clamp(1.0rem,3vw,2rem);
+}
+
+.blurb b.h5{
+    font-size: clamp(0.75rem,3vw,1.5rem);
+    margin:0%;
+}
+
+
+/* 
+@media (min-width: 992px){
+
+    .blurb b.h4{
+        font-size: x-large;
+    }
+
+    .blurb b.h5{
+        font-size: large;
+    }
+} */
+
 
 /* ------------ Hello Blurb ------------ */
 .hello-blurb{
@@ -68,9 +90,9 @@ a{
     margin-left: 2rem;
     margin-right: 2rem;
     padding: 1em;;
-  }
+}
 
-  @media (min-width: 992px){
+@media (min-width: 992px){
     .navbar li {
         margin-left : 1em;
         margin-right : 1em;
@@ -80,6 +102,8 @@ a{
 /* ------------ Location Blurb ------------ */
 .location-blurb{
     position:absolute;
+    display: flex;
+    align-items: center;
     padding: 0.4em 1em 0.4em 0.5em;
     z-index: 1;
     border-radius: 1.2rem;
@@ -91,9 +115,15 @@ a{
 
 .location-blurb img{
     filter:invert(1);
-    width:35px;
-    height:50px;
-    margin-right:0.75em;
+
+    min-height:1.2rem;
+    height:3vw;
+    max-height:2.5rem;
+
+    /* width:35px;
+    height:50px; */
+    /* margin-right:0.75em; */
+    margin-right:clamp(0.15rem,1vw,0.5rem);
     object-fit:contain;
 }
 
