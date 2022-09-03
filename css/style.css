@@ -138,6 +138,7 @@ h1{
     font-weight: 300;
 }
 
+/* ------------------------- Site Navigation ------------------------- */
 .navbar-brand{
     font-size: x-large;
     font-family: 'Montserrat', sans-serif;
@@ -179,10 +180,6 @@ footer .lead{
 
 h3.card-title{
     margin:0;
-}
-
-.navbar{
-    
 }
 
 /* ------------------------- Featured Projects ------------------------- */
@@ -370,9 +367,7 @@ h3.card-title{
 .contact-form-col{
     padding:0 1em 0 1em;
 }
-.contact-row{
 
-}
 .form-col{
     padding:0.3em;
 }

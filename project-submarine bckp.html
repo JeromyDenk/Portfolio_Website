@@ -15,7 +15,6 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/project-page.css">
     <link rel="stylesheet" href="css/slideshow.css">
-    <link rel="stylesheet" href="css/scrollspy-toc.css">
 
 
     <title>Submersible Ballast System</title>
@@ -110,91 +109,90 @@
             <div class="container-lg bg-light p-0">
                 <div class="row">
                     <div class="col-3 d-none d-md-block">
-                        <nav class="nav-toc">
-                            <h5>on this page</h5>
-                            <a class="toc-link" href="#item-1">Project Mandate</a>
-                            <a class="toc-link" href="#item-2">Proposed Design</a>
-                            <ul>
-                                <a class="toc-link" href="#item-2-1">Main Ballast System</a>
-                                <a class="toc-link" href="#item-2-2">Variable Ballast System</a>
-                                <a class="toc-link" href="#item-2-3">Emergency Dropweights</a>    
-                            </ul> 
-                            <a class="toc-link" href="#item-3">Parametrization</a>
-                            <a class="toc-link" href="#item-4">Video and Report</a>              
+                        <nav id="navbar-toc" class="toc-nav navbar navbar-light bg-light flex-column align-items-stretch p-3">
+                            <a class="navbar-brand" href="#">on this page</a>
+                            <nav class="nav nav-pills flex-column">
+                                <a class="nav-link" href="#item-1">Project Mandate</a>
+                                <a class="nav-link" href="#item-2">Proposed Design</a>
+                                <nav class="nav nav-pills flex-column">
+                                    <a class="nav-link ms-3 my-1" href="#item-2-1">Main Ballast System</a>
+                                    <a class="nav-link ms-3 my-1" href="#item-2-2">Variable Ballast System</a>
+                                    <a class="nav-link ms-3 my-1" href="#item-2-3">Emergency Dropweights</a>
+                                </nav>
+                                <a class="nav-link" href="#item-3">Parametrization</a>
+                                <a class="nav-link" href="#item-4">Video and Report</a>
+                            </nav>
                         </nav>
                     </div>
 
                     
                     <!-- Article -->
                     <div class="col-12 col-md-9">
-                        <article class="contents">
+                        <article data-bs-spy="scroll" data-bs-target="#navbar-toc" data-bs-offset="0" tabindex="0" class="contents">
                             <!------------------------------- NEW SECTION ------------------------------------>
-                            <section class="article-section" id="item-1">
-                                <h2>The Project</h2>
+                               <h2 id="item-1">The Project</h2>
+                               <p>
+                                    For our engineering capstone project, our group was tasked with designing a ballast system for a manned submersible that would allow the craft to dive to depths of up to 1000m below sea level.
+                                </p>
                                 <p>
-                                     For our engineering capstone project, our group was tasked with designing a ballast system for a manned submersible that would allow the craft to dive to depths of up to 1000m below sea level.
-                                 </p>
-                                 <p>
-                                     Design of the vessel was broken up into two teams, with one team tasked with designing the sub's frame and passenger cabin, and our team: tasked with designing the sub's ballast system. Working with another team proved to be a very valuable learning experience. Early attempts at integrating the design of the ballast system with the sub's frame resulted in severe weight and balance issues that had to be resolved through several meetings. At the end, the sub met or exceeded all of the design requirements. Looking back, I'm proud of the design our team came up with.
-                                 </p>
- 
-                                 <!-- <img src="images/submarine/card-submarine.jpg" alt=""> -->
-                                 <div class="slideshow-container">
-                                     <!-- Full-width images with number text -->
-                                     <div class="mySlides">
-                                         <div class="numbertext">1 / 5</div>
-                                         <img src="images/submarine/Untitled.jpg" style="width:100%">
-                                         <div class="caption-text">Submersible with outer shell hidden</div>
-                                     </div>
-                                     <div class="mySlides">
-                                         <div class="numbertext">2 / 5</div>
-                                         <img src="images/submarine/Capstone-Submarine 2.jpg" style="width:100%">
-                                         <div class="caption-text">Rear view of ballast system assembly with frame hidden</div>
-                                     </div>
-                         
-                                     <div class="mySlides">
-                                         <div class="numbertext">3 / 5</div>
-                                         <img src="images/submarine/Capstone-Submarine.jpg" style="width:100%">
-                                         <div class="caption-text">Front view of ballast system assembly with frame hidden</div>
-                                     </div>
-                                     
-                                     <div class="mySlides">
-                                         <div class="numbertext">4 / 5</div>
-                                         <img src="images/submarine/Capstone-Submarine-Final-6 2.jpg" style="width:100%">
-                                         <div class="caption-text">Render of submersible underwater. Shell hidden to show MBTs</div>
-                                     </div>
- 
-                                     <div class="mySlides">
-                                         <div class="numbertext">5 / 5</div>
-                                         <img src="images/submarine/Capstone-Submarine-Final-6 3.jpg" style="width:100%">
-                                         <div class="caption-text">Render of submersible underwater (rear). Shell hidden to show valve panel and rear VBT.</div>
-                                     </div>
-                         
-                                     <!-- Next and previous buttons -->
-                                     <div class="hover-bar left">
-                                         <a class="prev">&#10094;<span></span></a>
-                                     </div>
-                                     <div class="hover-bar right">
-                                         <a class="next">&#10095;<span></span></a>
-                                     </div>
-                         
-                                 </div>
-                                 <h3>Design Requirements</h3>
-                                 <p>
-                                     The project design requirements consisted of the following:
-                                     <ul>
-                                         <li>The submarine must be capable of withstanding dives of up to 1000m in depth</li>
-                                         <li>Main ballast tanks used for surfacing the sub must be capable of generating 2200kg of buoyant force</li>
-                                         <li>Variable ballast tanks used for pitch trim and deptch control must provide a maximum of 50kg of buoyancy</li>
-                                         <li>The sub must contain a drop weight mechanism for emergency deballasting</li>
-                                     </ul>
-                                 </p>
-                            </section>
+                                    Design of the vessel was broken up into two teams, with one team tasked with designing the sub's frame and passenger cabin, and our team: tasked with designing the sub's ballast system. Working with another team proved to be a very valuable learning experience. Early attempts at integrating the design of the ballast system with the sub's frame resulted in severe weight and balance issues that had to be resolved through several meetings. At the end, the sub met or exceeded all of the design requirements. Looking back, I'm proud of the design our team came up with.
+                                </p>
+
+                                <!-- <img src="images/submarine/card-submarine.jpg" alt=""> -->
+                                <div class="slideshow-container">
+                                    <!-- Full-width images with number text -->
+                                    <div class="mySlides">
+                                        <div class="numbertext">1 / 5</div>
+                                        <img src="images/submarine/Untitled.jpg" style="width:100%">
+                                        <div class="caption-text">Submersible with outer shell hidden</div>
+                                    </div>
+                                    <div class="mySlides">
+                                        <div class="numbertext">2 / 5</div>
+                                        <img src="images/submarine/Capstone-Submarine 2.jpg" style="width:100%">
+                                        <div class="caption-text">Rear view of ballast system assembly with frame hidden</div>
+                                    </div>
+                        
+                                    <div class="mySlides">
+                                        <div class="numbertext">3 / 5</div>
+                                        <img src="images/submarine/Capstone-Submarine.jpg" style="width:100%">
+                                        <div class="caption-text">Front view of ballast system assembly with frame hidden</div>
+                                    </div>
+                                    
+                                    <div class="mySlides">
+                                        <div class="numbertext">4 / 5</div>
+                                        <img src="images/submarine/Capstone-Submarine-Final-6 2.jpg" style="width:100%">
+                                        <div class="caption-text">Render of submersible underwater. Shell hidden to show MBTs</div>
+                                    </div>
+
+                                    <div class="mySlides">
+                                        <div class="numbertext">5 / 5</div>
+                                        <img src="images/submarine/Capstone-Submarine-Final-6 3.jpg" style="width:100%">
+                                        <div class="caption-text">Render of submersible underwater (rear). Shell hidden to show valve panel and rear VBT.</div>
+                                    </div>
+                        
+                                    <!-- Next and previous buttons -->
+                                    <div class="hover-bar left">
+                                        <a class="prev">&#10094;<span></span></a>
+                                    </div>
+                                    <div class="hover-bar right">
+                                        <a class="next">&#10095;<span></span></a>
+                                    </div>
+                        
+                                </div>
+                                <h3>Design Requirements</h3>
+                                <p>
+                                    The project design requirements consisted of the following:
+                                    <ul>
+                                        <li>The submarine must be capable of withstanding dives of up to 1000m in depth</li>
+                                        <li>Main ballast tanks used for surfacing the sub must be capable of generating 2200kg of buoyant force</li>
+                                        <li>Variable ballast tanks used for pitch trim and deptch control must provide a maximum of 50kg of buoyancy</li>
+                                        <li>The sub must contain a drop weight mechanism for emergency deballasting</li>
+                                    </ul>
+                                </p>
                             <!------------------------------- NEW SECTION ------------------------------------>
-                            <section class="article-section" id="item-2-1">
                                 <h2 id="item-2">Proposed Design</h2>
-                                <!---------------- NEW SUBSECTION ---------------->
-                                <h3>The Main Ballast System</h3>
+                            <!---------------- NEW SUBSECTION ---------------->
+                                <h3 id="item-2-1">The Main Ballast System</h3>
                                 <!-- <img src="images/submarine/Capstone-Submarine-Final-8 2.jpg" alt=""> -->
                                 <div class="slideshow-container">
                                     <!-- Full-width images with number text -->
@@ -241,11 +239,8 @@
                                 <p>
                                     Deballasting (flooding the main ballast tanks) is accomplished by four solenoid-controlled valves - two on top of each MBT. When opened, the weight of the submarine forces water to displace the air inside the MBTs, putting the sub in a neutrally buoyant state and ready to dive.
                                 </p>
-                            </section>
-
-                            <section class="article-section" id="item-2-2">
-                                <!---------------- NEW SUBSECTION ---------------->
-                                <h3>The Variable Ballast System</h3>
+                            <!---------------- NEW SUBSECTION ---------------->
+                                <h3 id="item-2-2">The Variable Ballast System</h3>
                                 <!-- <img src="images/submarine/Capstone-Submarine-Final-4.jpg" alt=""> -->
                                 <div class="slideshow-container">
                                     <!-- Full-width images with number text -->
@@ -275,7 +270,7 @@
                                         <img src="images/submarine/Capstone_report (1)_page72_image16.jpg" style="width:100%">
                                         <div class="caption-text">Valve Panel - top view - labeled</div>
                                     </div> -->
-    
+
                         
                                     <!-- Next and previous buttons -->
                                     <div class="hover-bar left">
@@ -312,7 +307,7 @@
                                         <img src="images/submarine/Capstone_report (1)_page72_image16.jpg" style="width:100%">
                                         <div class="caption-text">Valve Panel - top view - labeled</div>
                                     </div> -->
-    
+
                         
                                     <!-- Next and previous buttons -->
                                     <div class="hover-bar left">
@@ -322,7 +317,7 @@
                                         <a class="next">&#10095;<span></span></a>
                                     </div>
                                     <!-- <a class="expand"><img src="images/138-enlarge.png" alt=""></a> -->
-                                    
+                        
                                 </div>
                                 <p>
                                     Located behind the passenger compartment, the valve panel houses the electric motor, pump, seawater intake, and all of the plumbing and solenoid valves needed to accomplish both pitch-trim control and depth-control of the submarine.
@@ -330,11 +325,9 @@
                                 <p>
                                     The variable ballast system is explained in-depth in our team's video presentation, as well as in our full project report.
                                 </p>
-                            </section>
-                            
-                            <section class="article-section" id="item-2-3">
-                                <!---------------- NEW SUBSECTION ---------------->
-                                <h3>Emergency Dropweights</h3>
+
+                            <!---------------- NEW SUBSECTION ---------------->
+                                <h3 id="item-2-3">Emergency Dropweights</h3>
                                 <!-- <img src="images/submarine/Untitled 3.jpg" alt=""> -->
                                 <div class="slideshow-container">
                                     <!-- Full-width images with number text -->
@@ -348,7 +341,7 @@
                                         <img src="images/submarine/Untitled 3.jpg" style="width:100%">
                                         <div class="caption-text">Left dropweight </div>
                                     </div>
-    
+
                                     <div class="mySlides">
                                         <div class="numbertext">3 / 4</div>
                                         <img src="images/submarine/Capstone_report (1)_page72_image21.jpg" style="width:100%">
@@ -365,7 +358,7 @@
                                         <img src="images/submarine/Capstone_report (1)_page72_image16.jpg" style="width:100%">
                                         <div class="caption-text">Valve Panel - top view - labeled</div>
                                     </div> -->
-    
+
                         
                                     <!-- Next and previous buttons -->
                                     <div class="hover-bar left">
@@ -383,10 +376,9 @@
                                 <p>
                                     In the event of an emergency, or complete loss of power, solenoid actuators holding the dropweights in place via pins retract, allowing the dropweights to be jettisoned. This places the submarine into a positively buoyant state, even in the event that all VBTs and MBTs are completely flooded with water.
                                 </p>
-                            </section>
+                            
                             <!------------------------------- NEW SECTION ------------------------------------>
-                            <section class="article-section" id="item-3">
-                                <h2>Parametrization</h2>
+                                <h2 id="item-3">Parametrization</h2>
                                 <p>In order to allow for rapid reconfiguring of the ballast system design, a MATLAB GUI was created, which allows the user to quickly generate Solidworks part files given a range of inputs:</p>
                                 <p>
                                     <ul>
@@ -433,11 +425,9 @@
                                     <!-- <a class="expand"><img src="images/138-enlarge.png" alt=""></a> -->
                         
                                 </div>
-                            </section>
                             
                             <!------------------------------- NEW SECTION ------------------------------------>    
-                            <section class="article-section" id="item-4">
-                                <h2>Presentation Video and Project Report</h2>
+                            <h2 id="item-4">Presentation Video and Project Report</h2>
                                 <p>A copy of our team's project report, detailing our full design process, is available <a href="images/submarine/Capstone_report.pdf">here</a>.</p>
                                 <p>Below is a video of our team's final design presentation. Due to COVID measures, it was recorded in advance and presented to our project supervisor. </p>
                                 <div class="video-container" >
@@ -452,7 +442,7 @@
                                     </iframe>
                                 </div>
                                 <p>Notice how tired we all seem! Finals season spares no-one.</p>
-                            </section>
+
                          </article>
                     </div>
                 </div>
@@ -553,60 +543,6 @@
 
     <!-- Bootstrap JS File -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
-
-    <!-- ScrollSpy -->
-    <script>
-        window.onload = () => {
-            const sections = document.querySelectorAll('.article-section');
-            const label = document.querySelectorAll('.toc-link');
-            
-            const observer = new IntersectionObserver((entries) => {
-                for(const entry of entries)
-                if(entry.isIntersecting)
-                    trgt = entry.target;
-                    id = trgt.id;
-                    document.querySelectorAll('.toc-link.active').forEach(i => {i.classList.remove('active')});
-                    document.querySelector('a[href*=' + id + ']').classList.add('active');
-
-                    //For sub-sections, make parent toc-link active (assume there is an active sub-heading)
-                    subToc = document.querySelectorAll('ul .toc-link.active')[0];
-                    if(subToc != null){
-                        subToc.parentNode.previousElementSibling.classList.add('active');
-                    }
-                },{
-                rootMargin: "-50% 0px"
-            });
-            for (let i = 0; i < sections.length; i++)
-            observer.observe(sections[i]);
-        };
-    </script>
-
-
-    <!-- <script>
-        let section = document.querySelectorAll('.article-section');
-        let navLinks = document.querySelectorAll('.toc-link');
-
-        window.onscroll = function(){
-
-            section.forEach(sec =>{
-
-                let top = window.scrollY;
-                let offset = sec.offsetTop;
-                let height = sec.offsetHeight;
-                let id = sec.getAttribute('id');
-
-                if(top >= offset && top < offset + height){
-                    navLinks.forEach(links =>{
-                        links.classList.remove('active');
-                        document.querySelector('a[href*=' + id + ']').classList.add('active');
-
-                    })
-                }
-
-            })
-
-        }
-    </script> -->
 
     <!-- Slideshow Script -->
     <script>
