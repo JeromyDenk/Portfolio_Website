@@ -86,31 +86,33 @@
             <div class="container-lg bg-light my-0 p-4">
                 <div class="row">
                     <!-- Let's Get in Touch -->
-                    <div class="col-12 col-md-8">
+                    <div class="col-12 col-md-8 pe-4">
                         <h1>Let's get in touch!</h1>
                         <p>Interested in hiring me or collaborating on a project? Please feel free to reach out! I would be happy to answer any questions or inquiries you may have.</p>
                     
                     <!-- Contact Form -->
                     <!-- Name and Email -->
-                    <div class="row contact-row m-0">
-                        <!-- Name -->
-                        <div class="col-12 col-md-6 form-col">
-                            <input type="Name" class="form-control" id="formInputName" placeholder="Name">
+                    <form action="https://formspree.io/f/mvoyzgwp" method="POST">
+                        <div class="row contact-row m-0">
+                            <!-- Name -->
+                            <div class="col-12 col-md-6 form-col name-col">
+                                <input type="name" class="form-control" id="formInputName" placeholder="Name">
+                            </div>
+                            <!-- Email -->
+                            <div class="col-12 col-md-6 form-col email-col">
+                                <input type="email" class="form-control" id="formInputEmail" placeholder="Email">
+                            </div>
+                            <!-- Message -->
+                            <div class="col form-col message-col">
+                                <textarea name="message" class="form-control" id="exampleFormControlTextarea1" placeholder="Message" rows="4"></textarea>
+                            </div>
+                            <!-- Send Button -->
+                            <div class="col-12 form-col text-center">
+                                <button type="submit" class="btn btn-lg btn-primary" href="JeromyCV-SEPTEMBER2021.pdf">Send</a>
+                            </div>
                         </div>
-                        <!-- Email -->
-                        <div class="col-12 col-md-6 form-col">
-                            <input type="Email" class="form-control" id="formInputEmail" placeholder="Email">
-                        </div>
-                        <!-- Message -->
-                        <div class="col form-col">
-                            <textarea class="form-control" id="exampleFormControlTextarea1" placeholder="Message" rows="3"></textarea>
-                        </div>
-                        <!-- Send Button -->
-                        <div class="col-12 form-col text-center">
-                            <button class="btn btn-lg btn-primary" href="JeromyCV-SEPTEMBER2021.pdf">Send</a>
-                        </div>
-                    </div>
-                    </div>
+                    </form>
+                </div>
                     <!-- Contact Details -->
                     <div class="col-12 col-md-4" id="contact-details">
                         <!-- Call Me -->

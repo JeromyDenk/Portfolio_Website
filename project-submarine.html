@@ -85,9 +85,9 @@
     
         <!-- Breadcrumbs -->
         <section>
-            <div class="container-lg p-0">
+            <div class="container-lg p-0 ">
                 <nav>
-                    <ol class="breadcrumb">
+                    <ol class="breadcrumb hdr-shadow">
                         <li class="breadcrumb-item">
                             <a href="projects.html">Projects</a></li>
                         <li class="breadcrumb-item active"><span>Submersible Ballast System</span> </li>
@@ -100,6 +100,7 @@
         <section>
             <!-- Last Updated -->
             <div class="container-lg bg-light p-0">
+                <div class="grad-upper container-lg"></div>
                 <div class="last-updated">
                     <img src="images/84380.png" style="height:1.5rem;width:1.5rem"alt="">
                     <span>Last Updated:</span> August 14 2022
@@ -112,7 +113,7 @@
                     <div class="col-3 d-none d-md-block">
                         <nav class="nav-toc">
                             <h5>on this page</h5>
-                            <a class="toc-link" href="#item-1">Project Mandate</a>
+                            <a class="toc-link active" href="#item-1">Project Mandate</a>
                             <a class="toc-link" href="#item-2">Proposed Design</a>
                             <ul>
                                 <a class="toc-link" href="#item-2-1">Main Ballast System</a>
@@ -457,6 +458,7 @@
                     </div>
                 </div>
             </div>
+            <div class="grad-lower container-lg"></div>
         </section>
             
         <!-- Contact Header -->
@@ -469,14 +471,14 @@
         <!-- Contact Section -->
         <section>
             <!-- Contact Form -->
-            <div class="container-lg bg-light pt-4">
-                <div class="row">
+            <div class="container-lg bg-light py-4">
+                <div class="row m-0">
                     <!-- Picture -->
-                    <div class="col-3 d-none d-md-block align-items-center justify-content-center">
+                    <div class="col-3 contact-selfie-col d-none d-md-block p-2 my-auto">
                         <img src="images/backpacking_selfie.jpg" class="contact-selfie" alt="">
                     </div>
                     <!-- Form -->
-                    <div class="col">
+                    <div class="col contact-form-col p-2">
                         <!-- Text -->
                         <div class="col">
                             <p class="fs-4">
@@ -485,54 +487,60 @@
                             </p>
                         </div>
                         <!-- Name and Email -->
-                        <div class="row">
-                            <!-- Name -->
-                            <div class="col-12 col-md-6">
-                                <input type="Name" class="form-control" id="formInputName" placeholder="Name">
+                        <form action="https://formspree.io/f/mvoyzgwp" method="POST">
+                            <div class="row contact-row m-0">
+                                <!-- Name -->
+                                <div class="col-12 col-md-6 form-col name-col">
+                                    <input type="name" class="form-control" id="formInputName" placeholder="Name">
+                                </div>
+                                <!-- Email -->
+                                <div class="col-12 col-md-6 form-col email-col">
+                                    <input type="email" class="form-control" id="formInputEmail" placeholder="Email">
+                                </div>
+                                <!-- Message -->
+                                <div class="col form-col message-col">
+                                    <textarea name="message" class="form-control" id="exampleFormControlTextarea1" placeholder="Message" rows="4"></textarea>
+                                </div>
+                                <!-- Send Button -->
+                                <div class="col-12 form-col text-center">
+                                    <button type="submit" class="btn btn-lg btn-primary" href="JeromyCV-SEPTEMBER2021.pdf">Send</a>
+                                </div>
                             </div>
-                            <!-- Email -->
-                            <div class="col">
-                                <input type="Email" class="form-control" id="formInputEmail" placeholder="Email">
-                            </div>
-                        </div>
-                        <!-- Message -->
-                        <div class="col">
-                            <textarea class="form-control" id="exampleFormControlTextarea1" placeholder="Message" rows="3"></textarea>
-                        </div>
+                        </form>
                     </div>
     
     
                 </div>
                 <!-- Contact Icons -->
-                <div class="container-lg p-2">
-                    <div class="row px-5 pb-3 text-center">
+                <div class="container-lg p-2 icon-cont">
+                    <div class="row pt-3 text-center">
                             <!-- Call Me -->
                             <div class="col contact-icon">
-                                <a href="#">
+                                <a href="tel:289-260-0991">
                                     <img src="images/067-phone.png" style="width:64px;height:64px;object-fit:contain" class="img-fluid" alt="">
                                 </a>
                             </div>
                             <!-- Email Me -->
                             <div class="col contact-icon">
-                                <a href="#">
+                                <a href="mailto:jeromydenk@gmail.com">
                                     <img src="images/391-mail4.png" style="width:64px;height:64px;object-fit:contain" class="img-fluid" alt="">
                                 </a>
                             </div>
                             <!-- Linkedin -->
                             <div class="col contact-icon">
-                                <a href="#">
+                                <a href="https://www.linkedin.com/in/jeromy-denk-9753b2120/">
                                     <img src="images/linkedin-black.png" style="width:64px;height:64px;object-fit:contain" class="img-fluid" alt="">
                                 </a>
                             </div>
                             <!-- GrabCAD -->
                             <div class="col contact-icon">
-                                <a href="#">
+                                <a href="https://grabcad.com/jeromy.denk-1">
                                     <img src="images/grabcad_2.png" style="width:64px;height:64px;object-fit:contain" class="img-fluid" alt="">
                                 </a>
                             </div>
                             <!-- GitHub -->
                             <div class="col contact-icon">
-                                <a href="#">
+                                <a href="https://github.com/JeromyDenk">
                                     <img src="images/433-github.png" style="width:64px;height:64px;object-fit:contain" class="img-fluid" alt="">
                                 </a>
                             </div>

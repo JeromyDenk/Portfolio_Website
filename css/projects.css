@@ -6,6 +6,8 @@ section.projects .container-lg{
 }
 
 .filtering-header{
+    position: relative;
+    z-index: 1;
     padding-top:20px;
 }
 
@@ -20,10 +22,6 @@ section.projects .container-lg{
     vertical-align: middle;    
     cursor: pointer;
 }
-
-
-
-
 
 .filter-nav img{
     margin:0.2em;
@@ -46,6 +44,7 @@ section.projects .container-lg{
 
 .nav-item .filter-nav.active{
     background-color: #f44336;
+    filter:drop-shadow(4px 4px 3px rgba(0, 0, 0, 0.272));
 }
 /* Hover over Buttons */
 

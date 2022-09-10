@@ -11,7 +11,11 @@ p {
 }
 /* ------------------------- Contact Links ------------------------- */
 #contact-details{
+    display: flex;
+    flex-direction: column;
+    /* margin-top: 24.795px; */
     border-left:1px solid;
+    justify-content: space-between;
 }
 .contact-link{
     padding:1em;

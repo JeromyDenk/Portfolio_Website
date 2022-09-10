@@ -117,17 +117,23 @@ ol.breadcrumb > li.breadcrumb-item.active > span{
 /* ------------------------- Last Updated ------------------------- */
 
 .last-updated{
-    padding:1rem 0 1rem 4rem;
-    font-size:medium;
-    font-family: 'Montserrat', sans-serif;
+  position: relative;
+  z-index: 2;
+  padding:1rem 0 1rem 4rem;
+  font-size:medium;
+  font-family: 'Montserrat', sans-serif;
 }
 .last-updated span{
-    font-weight:bold;
+  font-weight:bold;
 }
 
   /* --------- Article ------------ */
   article.contents{
+    position: relative;
+    z-index: 1;
     max-width: 100%;
+    padding-left: 0;
+    padding-bottom: 4rem;
   }
 
   #item-1 h2{
