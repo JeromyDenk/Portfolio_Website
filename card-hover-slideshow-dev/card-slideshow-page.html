@@ -14,6 +14,7 @@
     <!-- Custom CSS File -->
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/projects.css">
+    <link rel="stylesheet" href="card-hover-slideshow-test.css">
     
     <title>Jeromy Denk</title>
 </head>
@@ -144,8 +145,10 @@
                     <div class="col-lg-6 col-md-6 col-sm-12 project-card filter cad">
                         <a href="#">
                             <div class="card bg-dark text-light p-3 center">
-                                <img src="test-images/project1/card-submarine.jpg" class="card-img-top">
-                                <img src="test-images/project1/Capstone_report (1)_page72_image2.jpg" class="preview-img" style="display:none" >
+                                <div class="slideshow">
+                                    <img src="test-images/project1/card-submarine.jpg" class="card-img-top">
+                                    <img src="test-images/project1/Capstone_report (1)_page72_image2.jpg" class="preview-img" style="display:none" >
+                                </div>
                                 <h3 class="card-title text-center">Project 1</h3>
                             </div>
                         </a>
@@ -155,8 +158,12 @@
                     <div class="col-lg-6 col-md-6 col-12 project-card filter cad programming build">
                         <a href="#">
                             <div class="card bg-dark text-light p-3 center">
-                                <img src="test-images/project2/gearbox 1.jpg" alt="" class="card-img-top">
-                                <img src="test-images/project1/Capstone_report (1)_page72_image2.jpg" class="preview-img" style="display:none" >
+                                <div class="slideshow">
+                                    <img src="../images/hexacopter/13329530_10208231966490300_581378862693555724_o.jpg" alt="" class="card-img-top img1">
+                                    <img src="../images/hexacopter/antenna-mount.png" class="preview-img img2" style="display:none" >
+                                    <img src="../images/hexacopter/305339163_1229263877898194_6179512421951439110_n.jpg" class="preview-img img3" style="display:none" >
+                                    <img src="../images/hexacopter/13308215_10208231961010163_9196257861747331296_o.jpg" class="preview-img img4" style="display:none" >
+                                </div>
                                 <h3 class="card-title text-center">Project 2</h3>
                             </div>
                         </a>
@@ -166,9 +173,11 @@
                     <div class="col-lg-6 col-md-6 col-12 project-card filter build programming">
                         <a href="#">
                             <div class="card bg-dark text-light p-3 center">
-                                <img src="test-images/project3/Ice Pyramid Project New 1.2.jpg" alt="" class="card-img-top">
-                                <img src="test-images/project1/Capstone_report (1)_page72_image2.jpg" class="preview-img" style="display:none" >
-                                <h3 class="card-title text-center">Project 3</h3>    
+                                <div class="slideshow">
+                                    <img src="test-images/project3/Ice Pyramid Project New 1.2.jpg" alt="" class="card-img-top">
+                                    <img src="test-images/project1/Capstone_report (1)_page72_image2.jpg" class="preview-img" style="display:none" >
+                                </div> 
+                                <h3 class="card-title text-center">Project 3</h3>   
                             </div>
                         </a>
                     </div>
@@ -195,13 +204,11 @@
     <!-- JQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
-    <!-- Card Hover Slideshow Test Javascript -->
-    <script src="card-hover-slideshow.js"></script>
     <!-- Filter Navs -->
     <script>
         $(document).ready(function() {
-        $(".filter-nav").click(function() {
-            var value = $(this).attr('data-filter');
+            $(".filter-nav").click(function() {
+                var value = $(this).attr('data-filter');
 
             if(value == "all")
             {
@@ -221,6 +228,9 @@
         });
         });
     </script>
+
+    <!-- Card Hover Slideshow Test Javascript -->
+    <script src="card-hover-slideshow-2.js"></script>
 
 </body>
 </html>

@@ -76,21 +76,13 @@ window.onload = function(){
         }
       }.bind(this), false);
 
-      //hover?
-      this.animating.addEventListener("mouseenter", function(e){
-        
-
-      }
-      
-      )
-
     }
     
     settingStyle(){
-      this.imagesWidth = this.images.offsetWidth;
+      this.imagesWidth = this.images.offsetWidth; //images div
       this.width = this.normalImages[0].width;
       this.height = this.normalImages[0].height;
-      this.dpi = this.width / this.imagesWidth;
+      //this.dpi = this.width / this.imagesWidth;
       
       this.images.style.height = this.canvasBox.style.height = this.imagesWidth * this.height / this.width + "px";
       
@@ -123,6 +115,7 @@ window.onload = function(){
       this.timer = setTimeout(this.slide.bind(this), this.interval);
     }
     
+    // engages the slide transition
     slide(){
       this.left ? 
       this.tween(-this.imagesWidth, this.duration, this.easing) :
@@ -142,12 +135,14 @@ window.onload = function(){
         this.progress = easingFunc(time / duration);
         this.render(this.progress, change);
         requestAnimationFrame(this.update.bind(this, startTime, change, duration, easingFunc));
-      } else {
+      } 
+      else {
         if(this.left){
           var firstEle = this.canvasArray[0];
           this.canvasArray.shift();
           this.canvasArray.push(firstEle);
-        } else {
+        } 
+        else {
           var lastEle = this.canvasArray[this.canvasArray.length - 1];
           this.canvasArray.pop();
           this.canvasArray.unshift(lastEle);

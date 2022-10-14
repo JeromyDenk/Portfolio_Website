@@ -1,0 +1,30 @@
+/* .card{
+    position: absolute;
+    width: 600px;
+    left: calc(50% - 300px);
+} */
+
+.slideshow {
+    position:relative;
+    width:100%;
+}
+
+.slideshow img {
+    display: none;
+    vertical-align: bottom;    
+}
+
+/* .card.card-img-top {
+    display:block;
+} */
+
+.canvas{
+    position: relative;
+    display:block;
+    overflow: hidden;
+  }
+
+canvas{
+    vertical-align: bottom;
+    position: absolute;
+}
