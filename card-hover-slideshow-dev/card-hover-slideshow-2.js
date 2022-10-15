@@ -25,6 +25,14 @@ window.onload = function(){
         slideshows[i] = new Slideshow(cards[i], property);  // Construct slideshow objects
         slideshows[i].init();   // Initialize slideshow objects
     }
+
+    // Add Window Event Listener
+    window.addEventListener("resize", function(e){
+        // Resize everything
+        for (let i = 0; i < cards.length; i++ ) {
+            slideshows[i].resizeSlideshow();
+        }
+    }.bind(this),false);
 }
 
 // Slideshow class
@@ -100,8 +108,6 @@ class Slideshow {
 
                     this.slide();
                 }
-
-
             }
         }.bind(this),false);
     }
@@ -137,6 +143,51 @@ class Slideshow {
                 canvas: canvas, context: context, image: image
             });
         }
+    }
+
+    resizeSlideshow() {
+        // console.log(this.cardElem.offsetWidth);
+        this.width = this.cardElem.offsetWidth;
+        this.height = this.width / this.ratio;
+        
+        //getSlideshowHeight(this.cardElem,this.ratio);
+        this.cardElem.style.removeProperty('height');
+        // this.cardElem.style.height = this.height;
+
+        //console.log(this.width/this.height);
+        console.log(this.cardElem.style.height);
+
+        // Make canvasbox same dimensions as first image
+        this.canvasBox.style.height = this.height + "px";
+        this.canvasBox.style.width = this.width + "px";
+
+        // Resize the canvases
+        for (var i = 0, len = this.canvasArray.length ; i < len; i++) {
+
+            this.canvasArray[i].canvas.width = this.width;
+            this.canvasArray[i].canvas.height = this.height;
+
+            this.canvasArray[i].canvas.style.width = this.width + "px";
+            this.canvasArray[i].canvas.style.height = this.height + "px";
+
+        }
+
+        // Change the change 
+        if (this.change > 0) {
+            this.change = this.width;
+        }
+        else {
+            this.change = -this.width;
+        }
+
+        if (this.animating == false)
+        {
+            this.render(this.progress, -this.width);    
+        }
+
+
+        // If not animating, render it?
+
     }
     
     slide(){
@@ -241,6 +292,7 @@ class Slideshow {
     }
 
     resetSlideshow() {
+        this.progress = 0;
         this.mouseHover = false;
         this.slideShowActive = false;
         this.animating = false;
@@ -249,9 +301,14 @@ class Slideshow {
         // Reset Canvas Array
         this.canvasArray = []
 
+        // Remove canvases from DOM (since they are out of order)
+        this.canvasBox.replaceChildren();
+
         // Repopulate Canvas Array
         this.settingCanvas();
 
+        // initial render
+        this.render(this.progress, -this.width);    
     }
 }
 
