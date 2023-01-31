@@ -1,0 +1,10 @@
+/* .article.contents{
+  padding-left:auto;
+} */
+
+.contents {
+  padding: 1em;
+  max-width: 800px;
+  font-size: 1.2em;
+  font-family: "Frank Ruhl Libre", sans-serif;
+}

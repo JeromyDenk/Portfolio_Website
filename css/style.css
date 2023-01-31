@@ -405,3 +405,8 @@ h3.card-title{
     background-image: linear-gradient(to top, rgba(86, 86, 86, 0.771), rgba(255, 255, 255, 0.62), rgba(255, 255, 255, 0));
     transform: translateY(-100%);
 }
+
+/* ------------------------- Cards ------------------------- */
+.project-card.disabled *{
+    cursor:not-allowed;
+}

@@ -19,3 +19,7 @@
         height: 1683.24px; /*(1320+32)x1.245*/
     }
 }
+
+.resume-container p {
+    color: white;
+}

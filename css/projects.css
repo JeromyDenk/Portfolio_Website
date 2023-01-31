@@ -56,3 +56,8 @@ section.projects .container-lg{
 .nav-item .filter-nav.active:hover{
     background-color: #f44336;
 }
+
+/* ------------------------- Cards ------------------------- */
+/* .project-card.disabled *{
+    cursor:not-allowed;
+} */
