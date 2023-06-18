@@ -132,9 +132,15 @@ ol.breadcrumb > li.breadcrumb-item.active > span{
     position: relative;
     z-index: 1;
     max-width: 100%;
-    padding-left: 0;
     padding-bottom: 4rem;
   }
+
+  @media (min-width: 768px){
+    article.contents{
+      padding-left: 0;
+    }
+  }
+
 
   #item-1 h2{
     padding-top:0;
