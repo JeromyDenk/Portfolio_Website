@@ -71,7 +71,11 @@
   }
 }
 
-
+/* ------------------------- Article Section ------------------------- */
+.article-section {
+  margin-top:-70px;
+  padding-top:70px;
+}
 
 /* .project-title h2:after{
   content: " ";
